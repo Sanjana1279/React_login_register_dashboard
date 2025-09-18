@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# React Login/Register/Dashboard Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React-based frontend application demonstrating user authentication, registration, role-based access control, and dashboard features using React Router and JSON Server as a mock backend.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- User Registration with form validation
+- User Login with session management
+- Role-based access control (RBAC) for menu permissions (add, edit, delete)
+- Protected routes and UI components based on user roles
+- Dashboard view with admin and employee specific content
+- Customer, Supplier, and Employee management pages
+- Mock backend using JSON Server for user and role data
+- Toast notifications for feedback (success, error, warnings)
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React (functional components, Hooks)
+- React Router v6 for SPA routing
+- JSON Server as a mock REST API backend
+- React Toastify for notifications
+- Bootstrap 5 for styling and layout
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js and npm installed
+- Git installed to clone and push repository
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```
+   git clone https://github.com/Sanjana1279/React_login_register_dashboard.git
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Navigate to project directory and install dependencies:
 
-### `npm run eject`
+   ```
+   cd React_login_register_dashboard
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Start JSON Server mock backend:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```
+   npx json-server --watch db.json --port 8000
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Run the React app:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```
+   npm start
+   ```
 
-## Learn More
+5. Open browser at `http://localhost:3000`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Register a new user via the register page
+- Login with registered credentials
+- Dashboard and menu access adjust dynamically based on your user role and permissions from mock backend
 
-### Code Splitting
+## Role-based Access Control
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Permissions are defined in `db.json` under `roleaccess`. The app stores these in the session and conditionally renders UI and routes:
 
-### Analyzing the Bundle Size
+```json
+{
+  "role": "admin",
+  "menu": "supplier",
+  "haveadd": true,
+  "haveedit": true,
+  "havedelete": true
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
