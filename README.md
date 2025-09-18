@@ -69,12 +69,29 @@ Permissions are defined in `db.json` under `roleaccess`. The app stores these in
 
 ```json
 {
+      "role": "admin",
+      "menu": "customer",
+      "haveadd": true,
+      "haveedit": true,
+      "havedelete": true,
+      "id": "85ed"
+    },
+    {
   "role": "admin",
   "menu": "supplier",
   "haveadd": true,
   "haveedit": true,
   "havedelete": true
 }
+,
+    {
+      "role": "user",
+      "menu": "customer",
+      "haveadd": false,
+      "haveedit": false,
+      "havedelete": false,
+      "id": "c270"
+    }
 ```
 
 
