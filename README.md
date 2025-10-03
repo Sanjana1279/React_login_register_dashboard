@@ -13,6 +13,16 @@ This project is a React-based frontend application demonstrating user authentica
 - Mock backend using JSON Server for user and role data
 - Toast notifications for feedback (success, error, warnings)
 
+---
+
+## **Screenshots**
+
+<img width="1051" height="596" alt="image" src="https://github.com/user-attachments/assets/e4cc4a3b-dd7d-46da-a46e-54ec432a4701" />
+<img width="979" height="642" alt="image" src="https://github.com/user-attachments/assets/9e1df62c-e1cf-45cf-9b55-aef79f6aa24a" />
+<img width="1440" height="799" alt="image" src="https://github.com/user-attachments/assets/885100f6-e8ac-409f-9da8-79ad84625b69" />
+
+---
+
 ## Technologies Used
 
 - React (functional components, Hooks)
